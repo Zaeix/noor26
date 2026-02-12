@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Today | Noor'26</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/today.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">Noor'26</div>
+
+  <div class="hamburger play-sound" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a class="play-sound" href="index.html">Home</a>
+    <a class="play-sound" href="calendar.html">Calendar</a>
+    <a class="play-sound" href="duas.html">Duas</a>
+    <a class="play-sound" href="message.html">Reminders</a>
+  </div>
+</nav>
+
+<section class="today-wrapper">
+
+  <div class="date-row">
+    <div id="ramzanDate"></div>
+    <div id="engDate"></div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h3>🌙 Ayat of the Day</h3>
+    <p class="arabic" id="ayatArabic"></p>
+    <p class="meaning" id="ayatText"></p>
+    <div class="ref" id="ayatRef"></div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h3>✨ Hadees Reminder</h3>
+    <p class="arabic" id="hadeesArabic"></p>
+    <p class="meaning" id="hadeesText"></p>
+    <div class="ref" id="hadeesRef"></div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="section">
+    <h3>🤲 Dua for Today</h3>
+    <p class="arabic" id="duaArabic"></p>
+    <p class="meaning" id="duaText"></p>
+  </div>
+
+</section>
+
+<hr class="zoya">
+
+
+  <footer class="footer">
+        Noor'26 © 2026 <br>
+        Built with sincerity by <strong>Muhammad Ehtesham</strong> <br>
+        Remember Allah • Do Good • Avoid Sin <br>
+        🖤🤲🌙
+      </footer>
+
+<script src="js/today.js"></script>
+</body>
+</html>

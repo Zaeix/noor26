@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Noor'26</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Noor'26</div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="#"> Home</a>
+      <hr>
+      <a href="today.html"> Daily Ayat • Hadith • Dua</a>
+      <a href="calendar.html"> 2026 Ramadan Calendar</a>
+      <a href="duas.html"> Some Important Duas</a>
+      <a href="message.html"> Ramzan ki Fazilat</a>
+
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="bismillah">﷽</div>
+
+    <div class="quote-box">
+      <button class="q-btn left" onclick="prevQuote()">❮</button>
+
+      <div class="quote-content">
+        <p class="quote" id="autoQuote"></p>
+        <span class="quote-ref" id="autoRef"></span>
+      </div>
+
+      <button class="q-btn right" onclick="nextQuote()">❯</button>
+    </div>
+  </section>
+
+
+  <!-- BLOCKS ONLY -->
+  <main class="container">
+
+    <section class="cards">
+
+      <div class="card style-a play-sound" onclick="goToday()">
+        <img src="assets/cards/today.jpg">
+        <h3>For Today</h3>
+        <p>Ayat • Hadith • Dua</p>
+      </div>
+      <div class="card-info">
+        Daily spiritual reminders that help you stay connected with Allah throughout the day.
+      </div>
+
+      <div class="card style-b play-sound" onclick="goCalendar()">
+        <img src="assets/cards/calendar.jpg">
+        <h3>Ramadan Calendar 2026</h3>
+        <p>Ramadan • Sehri • Iftar</p>
+      </div>
+      <div class="card-info">
+        Stay disciplined with fasting, prayer timings, and important Islamic days.
+      </div>
+
+      <div class="card style-c play-sound" onclick="goDuas()">
+        <img src="assets/cards/duas.jpg">
+        <h3>Duas</h3>
+        <p>Forgiveness • Patience • Help</p>
+      </div>
+      <div class="card-info">
+        Short, meaningful duas for ease, hardship, and moments of silence.
+      </div>
+
+      <div class="card style-d play-sound" onclick="goMessage()">
+        <img src="assets/cards/fazilat.jpg">
+        <h3>Ramazan ki Fazilat</h3>
+        <p>Faith • Akhirat • Life</p>
+      </div>
+      <div class="card-info">
+        Gentle reminders to keep the heart aware of Allah and the Hereafter.
+      </div>
+
+    </section>
+  </main>
+
+  <!-- 🔥 FULL PAGE ARTICLE (NOT A BLOCK) -->
+  <section class="islamic-article">
+    <div class="article-inner">
+      <hr>
+
+
+      <h2>Ramadan as a Reminder</h2>
+      <p>
+        Ramadan sirf bhookha rehne ka naam nahi, balki dil aur rooh ki tarbiyat ka mahina hai.
+        Yeh humein sabr, discipline, shukr aur apni khwahishon par kaabu paana sikhata hai,
+        taaki hum Allah ki raza ko apni zindagi ka markaz bana saken. Ramadan ka asal maqsad yeh
+        hai ke uska asar sirf chand dinon tak mehdoood na rahe, balki saal bhar hamari namaz, akhlaaq
+        aur Allah ki yaad ke zariye zinda aur qaim rahe.
+        <br><br>
+        Noor'26 ek simple Islamic platform hai jo Ramadan 2026 ke dauraan daily use ke liye design
+        kiya gaya hai. Is website ka maqsad rozana ki zaroori Islamic cheezon jaise daily
+        ayat, duas, aur Ramadan calendar ko ek hi jagah par asaani se available karana hai,
+        taaki users apni ibadat aur routine ko behtar tareeke se manage kar saken.
+        <hr>
+
+
+        <!-- FOOTER -->
+      <footer class="footer">
+        Noor'26 © 2026 <br>
+        Built with sincerity by <strong>Muhammad Ehtesham</strong> <br>
+        Remember Allah • Do Good • Avoid Sin <br>
+        🖤🤲🌙
+      </footer>
+
+      <script src="js/home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+/* ===== RESET ===== */
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #efe8fb, #e2d6f6);
+  color:#2f1f47;
+  overflow-y:auto;
+}
+
+/* ===== MAIN WRAPPER ===== */
+.planner{
+  max-width:430px;
+  margin:0 auto;
+  padding:14px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(14px);}
+  to{opacity:1; transform:none;}
+}
+
+/* ===== TOP DATE + ROZA ===== */
+/* ===== TOP DATE + ROZA ===== */
+.top{
+  background: linear-gradient(135deg,#5d2f8b,#8b5fd6);
+  border-radius:22px;
+  padding:16px;
+  color:#000000;
+  box-shadow:0 10px 30px rgba(93,47,139,.35);
+
+  /* 🔥 FIX */
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  row-gap:6px;
+}
+
+/* LEFT : RAMADAN */
+.date{
+  grid-column:1 / 2;
+  grid-row:1;
+  font-weight:800;
+  letter-spacing:.3px;
+  color:#ffffff;
+  text-align:left;
+}
+
+/* RIGHT : ENGLISH DATE */
+.date.small{
+  grid-column:2 / 3;
+  grid-row:1;
+  font-size:13px;
+  opacity:.9;
+  color:#ffffff;
+  text-align:right;
+}
+
+/* ROZA TOGGLE FULL WIDTH BELOW */
+.top .toggle{
+  grid-column:1 / 3;
+  grid-row:2;
+}
+
+
+/* ===== ROWS ===== */
+.row.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+/* ===== CARDS ===== */
+.card{
+  background: linear-gradient(180deg,#ffffff,#f4efff);
+  border-radius:20px;
+  padding:14px;
+  border:1px solid #d2c1ee;
+
+}
+
+/* slight variation for interest */
+.card:nth-child(odd){
+  background: linear-gradient(180deg,#ffffff,#f1ebff);
+}
+
+.card.wide{
+  width:100%;
+}
+
+h4{
+  margin:0 0 8px;
+  font-size:13.5px;
+  font-weight:800;
+  letter-spacing:.3px;
+}
+
+/* ===== ARABIC TEXT ===== */
+.arabic{
+  font-size:18px;
+  text-align:center;
+  line-height:1.8;
+  margin:8px 0;
+  color:#4a1f77;
+}
+
+/* ===== STACK SECTION ===== */
+.tracker-scroll{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* ===== TOGGLE – NEW TICK STYLE ===== */
+.toggle{
+  background: linear-gradient(135deg,#ece3ff,#f7f3ff);
+  padding:10px 44px 10px 14px;
+  border-radius:16px;
+  margin-bottom:8px;
+  cursor:pointer;
+  position:relative;
+  transition:all .25s ease;
+  font-size:20px;
+}
+
+.toggle:hover{
+  transform:translateY(-1px);
+  box-shadow:0 6px 14px rgba(90,40,150,.25);
+}
+
+/* tick container */
+.tick{
+  position:absolute;
+  right:12px;
+  top:50%;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  border:2px solid #8a5fd6;
+  transform:translateY(-50%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  color:#fff;
+  background:transparent;
+  transition:all .3s cubic-bezier(.2,.8,.2,1);
+}
+
+/* CHECK MARK */
+.tick::after{
+  content:"✓";
+  transform:scale(0);
+  transition:.25s ease;
+}
+
+/* ACTIVE STATE */
+.toggle.active{
+  background: linear-gradient(135deg,#6a36a8,#8f5fd6);
+  color:#fff;
+}
+
+.toggle.active .tick{
+  background:#ffffff;
+  color:#6a36a8;
+  border-color:#ffffff;
+  box-shadow:0 0 0 6px rgba(255,255,255,.15);
+}
+
+.toggle.active .tick::after{
+  transform:scale(1);
+}
+
+/* ================= DIVIDER ================= */
+.divider{
+  text-align:center;
+  margin:18px 0 6px;
+  font-size:14px;
+  opacity:.85;
+  letter-spacing:1px;
+}
+
+
+
+
+.save-btn{
+   display:block;
+  margin: 0px auto 0px;
+  padding:20px 120px;
+  background:linear-gradient(135deg,#5d2f8b,#8b5fd6);
+  color:#fff;
+  border:none;
+  border-radius:14px;
+  font-size:13.5px;
+  font-weight:700;
+  letter-spacing:.4px;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(93,47,139,.35);
+}
+
+.save-btn:disabled{
+  opacity:.6;
+}
+
+
+
+/* BACK BUTTON */
+.back-btn{
+  display:block;
+  margin:8px auto 14px;
+  padding:20px 166px;
+  background:linear-gradient(135deg,#5d2f8b,#8b5fd6);
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.4px;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(93,47,139,.35);
+}

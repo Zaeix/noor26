@@ -1,0 +1,186 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI",system-ui,sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#f6f7fb,#efe8fb);
+  color:#2e1f3f;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  position:sticky;
+  height: 55px;
+  top:0;
+  background:#ffffff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 18px;
+  box-shadow:0 4px 14px rgba(0,0,0,.08);
+  z-index:1000;
+  border-bottom: #000000 solid ;
+}
+
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+  color:#6a36a8;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:26px;
+  height:3px;
+  background:#6a36a8;
+  transition:.35s ease;
+}
+
+.hamburger.active span:nth-child(1){
+  transform:translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2){
+  opacity:0;
+}
+.hamburger.active span:nth-child(3){
+  transform:translateY(-8px) rotate(-45deg);
+}
+
+/* ===== SLIDE MENU ===== */
+.dropdown-menu{
+  position:fixed;
+  top:55px;
+  right:-70%;
+  width:70%;
+  height:calc(100vh - 55px);
+  background:#fff;
+  box-shadow:-10px 0 30px rgba(0,0,0,.2);
+  transition:.4s ease;
+  z-index:99;
+}
+
+.dropdown-menu.show{
+  right:0;
+}
+
+.dropdown-menu a{
+  display:block;
+  padding:16px 24px;
+  font-size:18px;
+  font-weight:600;
+  text-decoration:none;
+  color:#4b1f77;
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
+
+body.menu-open{
+  overflow:hidden;
+}
+
+
+/* ===== PAGE WRAPPER ===== */
+.page{
+  max-width:520px;
+  margin:auto;
+  padding:26px 18px 40px;
+}
+
+/* Header */
+header{
+  text-align:center;
+  margin-bottom:18px;
+}
+
+.title{
+  font-size:26px;
+  font-weight:800;
+  color:#4b1f77;
+}
+
+.sub{
+  font-size:15px;
+  opacity:.7;
+  margin-top:4px;
+}
+
+/* Divider */
+.divider{
+  text-align:center;
+  margin:20px 0;
+  font-size:13px;
+  opacity:.5;
+}
+
+/* ===== DUA TEXT STYLE (NOT CARDS) ===== */
+
+.dua-card{
+  background:none;          /* ❌ card look removed */
+  border:none;
+  box-shadow:none;
+  padding:0;
+  margin-bottom:34px;
+}
+
+/* Heading */
+.dua-card h3{
+  font-size:19px;
+  color:#552c82;
+  margin-bottom:10px;
+}
+
+/* Arabic */
+.dua-ar{
+  font-size:24px;
+  line-height:2;
+  text-align:center;
+  color:#4b1f77;
+  margin:10px 0;
+  direction:rtl;
+}
+
+/* Meaning */
+.dua-meaning{
+  font-size:16.5px;
+  line-height:1.9;
+  margin:10px 0;
+  color:#2e1f3f;
+  text-align: center;
+}
+
+/* Reference */
+.dua-ref{
+  font-size:12px;
+  opacity:.55;
+  margin-top:6px;
+}
+
+
+.zoya{
+  border:none;
+  height:1px;
+  background:#000000;   /* ⭐ soft grey */
+  width:92%;            /* ⭐ left-right gap */
+  margin:16px auto;     /* ⭐ center align */
+  opacity: .4;
+}
+
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;
+  padding:14px 10px;     /* ⭐ reduced padding */
+  font-size:12px;
+  opacity:.7;
+  margin:0;              /* ⭐ safety */
+}
